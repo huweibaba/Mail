@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+		<bean type="org.apache.struts2.dispatcher.multipart.MultiPartRequest"
+
+			name="myRequestParser" class="org.mail.util.MyRequestParser" scope="default"
+			optional="true">
+		</bean>
+   <constant name="struts.multipart.handler" value="myRequestParser" />
+   <constant name="struts.devMode" value="true" />
+
+	<package name="default" extends="struts-default">
+
+
+		
+
+
+		<action name="getUserMessage" class="UserAction" method="getUserMessage">
+
+		</action>
+
+		<action name="register" class="UserAction" method="register">
+
+		</action>
+		<action name="getUserById" class="UserAction" method="getUserById">
+
+		</action>
+
+
+
+		<action name="sendMessage" class="SendAction" method="sendMessage">
+
+		</action>
+		
+		<action name="deleteSendMessage" class="SendAction" method="deleteSendMessage">
+
+		</action>
+
+
+
+		<action name="getAllReceiveMessage" class="ReceiveAction"
+			method="getAllReceiveMessage">
+
+		</action>
+
+
+		<action name="handleAttach" class="ReceiveAction" method="handleAttach">
+
+		</action>
+		
+		
+		<action name="getAllSendMessage" class="SendAction" method="getAllSendMessage">
+
+		</action>
+		
+		<action name="getNoReadMessage" class="ReceiveAction" method="getNoReadMessage">
+
+		</action>
+		
+		<action name="changeTag" class="ReceiveAction" method="changeTag">
+            
+		</action>
+		
+		<action name="addFriend" class="FriendAction" method="addFriend">
+            
+		</action>
+		
+		<action name="deleteFriend" class="FriendAction" method="deleteFriend">
+            
+		</action>
+		
+		<action name="getAllFriend" class="FriendAction" method="getAllFriend">
+            
+		</action>
+		
+		<action name="getAllDraft" class="DraftAction" method="getAllDraft">
+            
+		</action>
+		
+		<action name="saveDraft" class="DraftAction" method="saveDraft">
+            
+		</action>
+		
+		<action name="deleteDraft" class="DraftAction" method="deleteDraft">
+            
+		</action>
+		
+
+
+
+	</package>
+</struts>    
